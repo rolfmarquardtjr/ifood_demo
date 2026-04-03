@@ -7,9 +7,9 @@ import { ThemeToggle } from "@/components/theme-toggle";
 
 const categories = [
   { name: "Blog", href: "/" },
-  { name: "Logística & Entrega", href: "/categoria/delivery" },
-  { name: "Restaurantes & Parceiros", href: "/categoria/restaurantes" },
-  { name: "Tendências & Inovação", href: "/categoria/tendencias" },
+  { name: "Segurança no Trânsito", href: "/categoria/seguranca" },
+  { name: "Prevenção de Acidentes", href: "/categoria/prevencao" },
+  { name: "Conscientização", href: "/categoria/conscientizacao" },
   { name: "Podcast Na Pista", href: "/podcast" },
 ];
 
@@ -46,13 +46,6 @@ export function BlogHeader() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <Link
-              href="/newsletter"
-              className="hidden sm:inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#EA1D2C] text-[#13151A] text-[13px] font-semibold shadow-lg shadow-[#EA1D2C]/20 hover:shadow-[#EA1D2C]/40 hover:bg-[#C41825] transition-all duration-300"
-            >
-              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-              Newsletter
-            </Link>
             <ThemeToggle />
             <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden p-2.5 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -72,9 +65,6 @@ export function BlogHeader() {
                   {cat.name}
                 </Link>
               ))}
-              <Link href="/newsletter" onClick={() => setMenuOpen(false)} className="mt-2 mx-4 py-3 rounded-xl bg-[#EA1D2C] text-[#13151A] text-sm font-semibold text-center">
-                Assinar Newsletter
-              </Link>
             </nav>
           </div>
         )}

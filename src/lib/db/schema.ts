@@ -6,7 +6,7 @@ export const articles = pgTable("articles", {
   slug: text("slug").unique().notNull(),
   summary: text("summary").notNull(),
   content: text("content").notNull(),
-  category: text("category").notNull(), // 'delivery' | 'restaurantes' | 'tendencias'
+  category: text("category").notNull(), // 'seguranca' | 'prevencao' | 'conscientizacao'
   imageUrl: text("image_url"),
   imageSource: text("image_source"), // 'gemini' | 'pixabay' | 'manual'
   audioUrl: text("audio_url"),
@@ -33,7 +33,7 @@ export const sources = pgTable("sources", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
   url: text("url").notNull(),
-  category: text("category").notNull(), // 'delivery' | 'restaurantes' | 'tendencias' | 'geral'
+  category: text("category").notNull(), // 'seguranca' | 'prevencao' | 'conscientizacao' | 'geral'
   selector: text("selector"), // CSS selector for scraping
   active: boolean("active").default(true).notNull(),
   lastScrapedAt: timestamp("last_scraped_at"),

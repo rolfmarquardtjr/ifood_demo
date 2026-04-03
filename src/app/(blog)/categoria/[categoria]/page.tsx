@@ -5,15 +5,15 @@ import { ArticleCard } from "@/components/blog/article-card";
 import { notFound } from "next/navigation";
 
 const categoryLabels: Record<string, string> = {
-  delivery: "Logística & Entrega",
-  restaurantes: "Restaurantes & Parceiros",
-  tendencias: "Tendências & Inovação",
+  seguranca: "Segurança no Trânsito",
+  prevencao: "Prevenção de Acidentes",
+  conscientizacao: "Conscientização",
 };
 
 const categoryDescriptions: Record<string, string> = {
-  delivery: "Tudo sobre o corre do dia a dia: dicas de entrega, logística, como otimizar as corridas e chegar bem em casa.",
-  restaurantes: "Histórias dos parceiros que fazem a parada acontecer. Restaurantes, cozinhas e quem tá junto nessa.",
-  tendencias: "O que tá mudando no mundo do delivery: apps, tecnologia, novidades e o futuro do trampo.",
+  seguranca: "Dicas práticas de segurança pra quem pilota todo dia. Equipamentos, técnicas e o que fazer pra voltar pra casa inteiro.",
+  prevencao: "Como evitar acidentes no trânsito. Cuidados com a moto, atenção no corredor e prevenção no dia a dia do entregador.",
+  conscientizacao: "Maio Amarelo é todo dia. Campanhas, dados reais e histórias que fazem a gente pensar sobre o trânsito.",
 };
 
 export default async function CategoryPage({ params }: { params: Promise<{ categoria: string }> }) {

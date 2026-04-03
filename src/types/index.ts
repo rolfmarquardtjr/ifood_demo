@@ -1,4 +1,4 @@
-export type Category = "delivery" | "restaurantes" | "tendencias";
+export type Category = "seguranca" | "prevencao" | "conscientizacao";
 export type ArticleStatus = "published" | "draft" | "unpublished";
 
 export interface ArticleSource {
@@ -18,8 +18,8 @@ export interface Settings {
   podcast_time: string; // "07:00"
   articles_per_day: number;
   category_proportions: {
-    delivery: number;
-    restaurantes: number;
-    tendencias: number;
+    seguranca: number;
+    prevencao: number;
+    conscientizacao: number;
   };
 }

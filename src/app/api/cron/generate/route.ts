@@ -18,12 +18,12 @@ async function searchRealNews(
   apiKey: string,
 ): Promise<{ title: string; summary: string; source: string }[]> {
   const categoryTopics: Record<string, string> = {
-    delivery: "logística de entrega, last mile delivery, entregadores, aplicativos de delivery, iFood, operação de entrega Brasil",
-    restaurantes: "restaurantes parceiros, gastronomia, food service, dark kitchens, cloud kitchens, tendências culinárias Brasil",
-    tendencias: "food tech, inovação em alimentação, inteligência artificial em delivery, tendências de consumo, mercado de delivery Brasil",
+    seguranca: "segurança no trânsito para motociclistas, equipamentos de proteção, pilotagem defensiva, EPIs para motoboys, capacete, luvas, cuidados no corredor",
+    prevencao: "prevenção de acidentes com motos, manutenção preventiva de motocicleta, cuidados na chuva, pneu careca, freios, iluminação, pontos cegos",
+    conscientizacao: "Maio Amarelo 2026, conscientização no trânsito, estatísticas de acidentes com motos, campanhas de segurança, educação no trânsito, respeito no trânsito",
   };
 
-  const topic = categoryTopics[category] || categoryTopics.delivery;
+  const topic = categoryTopics[category] || categoryTopics.seguranca;
 
   // Build source context from configured sources
   const sourceContext = configuredSources.length > 0
@@ -93,19 +93,19 @@ export async function POST(request: Request) {
 
     const db = getDb();
     const articlesPerDay = 1;
-    const proportions = await getSetting<{ delivery: number; restaurantes: number; tendencias: number }>("category_proportions") || { delivery: 40, restaurantes: 35, tendencias: 25 };
+    const proportions = await getSetting<{ seguranca: number; prevencao: number; conscientizacao: number }>("category_proportions") || { seguranca: 40, prevencao: 35, conscientizacao: 25 };
 
     // Load configured sources from DB
     const activeSources = await db.select().from(sources).where(eq(sources.active, true));
 
     // Determine categories for today based on proportions
     const categories: string[] = [];
-    const total = proportions.delivery + proportions.restaurantes + proportions.tendencias;
+    const total = proportions.seguranca + proportions.prevencao + proportions.conscientizacao;
     for (let i = 0; i < articlesPerDay; i++) {
       const rand = Math.random() * total;
-      if (rand < proportions.delivery) categories.push("delivery");
-      else if (rand < proportions.delivery + proportions.restaurantes) categories.push("restaurantes");
-      else categories.push("tendencias");
+      if (rand < proportions.seguranca) categories.push("seguranca");
+      else if (rand < proportions.seguranca + proportions.prevencao) categories.push("prevencao");
+      else categories.push("conscientizacao");
     }
 
     const generated = [];

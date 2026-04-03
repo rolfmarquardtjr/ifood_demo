@@ -9,10 +9,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes: MetadataRoute.Sitemap = [
     { url: BASE_URL, lastModified: new Date(), changeFrequency: "daily", priority: 1 },
     { url: `${BASE_URL}/podcast`, lastModified: new Date(), changeFrequency: "daily", priority: 0.8 },
-    { url: `${BASE_URL}/newsletter`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
-    { url: `${BASE_URL}/categoria/delivery`, lastModified: new Date(), changeFrequency: "daily", priority: 0.7 },
-    { url: `${BASE_URL}/categoria/restaurantes`, lastModified: new Date(), changeFrequency: "daily", priority: 0.7 },
-    { url: `${BASE_URL}/categoria/tendencias`, lastModified: new Date(), changeFrequency: "daily", priority: 0.7 },
+    { url: `${BASE_URL}/categoria/seguranca`, lastModified: new Date(), changeFrequency: "daily", priority: 0.7 },
+    { url: `${BASE_URL}/categoria/prevencao`, lastModified: new Date(), changeFrequency: "daily", priority: 0.7 },
+    { url: `${BASE_URL}/categoria/conscientizacao`, lastModified: new Date(), changeFrequency: "daily", priority: 0.7 },
   ];
 
   if (hasDb()) {

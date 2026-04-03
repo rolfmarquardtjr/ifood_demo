@@ -2,9 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 const categoryConfig: Record<string, { label: string; badgeClass: string }> = {
-  delivery: { label: "Logística & Entrega", badgeClass: "bg-red-500 text-white" },
-  restaurantes: { label: "Restaurantes & Parceiros", badgeClass: "bg-orange-500 text-white" },
-  tendencias: { label: "Tendências & Inovação", badgeClass: "bg-emerald-500 text-white" },
+  seguranca: { label: "Segurança no Trânsito", badgeClass: "bg-red-500 text-white" },
+  prevencao: { label: "Prevenção de Acidentes", badgeClass: "bg-yellow-500 text-white" },
+  conscientizacao: { label: "Conscientização", badgeClass: "bg-amber-500 text-white" },
 };
 
 interface ArticleCardProps {

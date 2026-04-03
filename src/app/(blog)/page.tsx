@@ -134,7 +134,7 @@ export default async function HomePage() {
                 <div className="w-16 h-1 bg-[#EA1D2C] rounded-full mt-2" />
               </div>
               <Link
-                href="/categoria/delivery"
+                href="/categoria/seguranca"
                 className="text-sm text-muted-foreground hover:text-foreground flex items-center gap-1.5 transition-colors group"
               >
                 Ver todas
@@ -179,23 +179,23 @@ export default async function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                title: "Logística & Entrega",
-                desc: "Dicas pra quem tá no corre: como se virar nas corridas, cuidar da moto e chegar bem em casa",
+                title: "Segurança no Trânsito",
+                desc: "Dicas práticas pra quem vive no corredor: como pilotar seguro, usar EPI e voltar pra casa inteiro",
                 color: "from-red-500/20 to-red-600/10",
                 iconPath:
-                  "M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0H21M3.375 14.25H21a1.125 1.125 0 001.125-1.125v-3.75a1.125 1.125 0 00-1.125-1.125H3.375A1.125 1.125 0 002.25 9.375v3.75c0 .621.504 1.125 1.125 1.125z",
+                  "M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z",
               },
               {
-                title: "Restaurantes & Parceiros",
-                desc: "Os parceiros que fazem a parada acontecer. Histórias de quem tá junto nessa",
-                color: "from-orange-500/20 to-orange-600/10",
+                title: "Prevenção de Acidentes",
+                desc: "O que fazer pra não beijar o chão: cuidados com a moto, atenção no trânsito e como evitar perrengue",
+                color: "from-yellow-500/20 to-yellow-600/10",
                 iconPath:
-                  "M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.349m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016A3.001 3.001 0 0021 9.349m-18 0a2.999 2.999 0 00.621-1.853L4.5 5.25A2.25 2.25 0 016.75 3h10.5a2.25 2.25 0 012.25 2.25v2.246a2.999 2.999 0 00.621 1.853",
+                  "M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z",
               },
               {
-                title: "Tendências & Inovação",
-                desc: "O que tá mudando no mundo do delivery, apps novos e tecnologia pra facilitar o trampo",
-                color: "from-emerald-500/20 to-emerald-600/10",
+                title: "Conscientização",
+                desc: "Maio Amarelo é todo dia. Dados, campanhas e histórias reais de quem vive o trânsito na pele",
+                color: "from-amber-500/20 to-amber-600/10",
                 iconPath:
                   "M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18",
               },

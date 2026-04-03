@@ -186,9 +186,9 @@ export function ArticleEditor({ article }: { article: Article }) {
                 <Select value={category} onValueChange={(v) => v && setCategory(v)}>
                   <SelectTrigger className="mt-1"><SelectValue /></SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="delivery">Logística & Entrega</SelectItem>
-                    <SelectItem value="restaurantes">Restaurantes & Parceiros</SelectItem>
-                    <SelectItem value="tendencias">Tendências & Inovação</SelectItem>
+                    <SelectItem value="seguranca">Segurança no Trânsito</SelectItem>
+                    <SelectItem value="prevencao">Prevenção de Acidentes</SelectItem>
+                    <SelectItem value="conscientizacao">Conscientização</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

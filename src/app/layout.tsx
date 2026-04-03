@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   description:
     "Blog do iFood pra quem vive no corre. Segurança no trânsito, dicas de entrega e novidades pra quem roda de moto todo dia. Maio Amarelo é todo dia, parceiro.",
-  keywords: ["motoboy", "entregador", "motoqueiro", "maio amarelo", "segurança no trânsito", "delivery", "ifood", "entregas"],
+  keywords: ["segurança no trânsito", "prevenção de acidentes", "conscientização", "maio amarelo", "motociclista", "motoboy"],
   openGraph: {
     title: "iFood Na Pista | Maio Amarelo 2026 — No Trânsito, Enxergar o Outro é Salvar Vidas",
     description: "Blog do iFood pra quem vive no corre. Segurança no trânsito, dicas de entrega e novidades pra quem roda de moto todo dia. Maio Amarelo é todo dia, parceiro.",

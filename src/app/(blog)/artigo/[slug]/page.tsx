@@ -11,9 +11,9 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 const categoryConfig: Record<string, { label: string; badgeClass: string; href: string }> = {
-  delivery: { label: "Logística & Entrega", badgeClass: "bg-red-500 text-white", href: "/categoria/delivery" },
-  restaurantes: { label: "Restaurantes & Parceiros", badgeClass: "bg-orange-500 text-white", href: "/categoria/restaurantes" },
-  tendencias: { label: "Tendências & Inovação", badgeClass: "bg-emerald-500 text-white", href: "/categoria/tendencias" },
+  seguranca: { label: "Segurança no Trânsito", badgeClass: "bg-red-500 text-white", href: "/categoria/seguranca" },
+  prevencao: { label: "Prevenção de Acidentes", badgeClass: "bg-yellow-500 text-white", href: "/categoria/prevencao" },
+  conscientizacao: { label: "Conscientização", badgeClass: "bg-amber-500 text-white", href: "/categoria/conscientizacao" },
 };
 
 function estimateReadTime(content: string): number {

@@ -36,9 +36,9 @@ export function BlogFooter() {
           <div className="md:col-span-3">
             <h3 className="text-foreground font-semibold text-xs uppercase tracking-widest mb-5">Categorias</h3>
             <ul className="space-y-3">
-              <li><Link href="/categoria/delivery" className="text-sm hover:text-foreground transition-colors duration-200">Logística & Entrega</Link></li>
-              <li><Link href="/categoria/restaurantes" className="text-sm hover:text-foreground transition-colors duration-200">Restaurantes & Parceiros</Link></li>
-              <li><Link href="/categoria/tendencias" className="text-sm hover:text-foreground transition-colors duration-200">Tendências & Inovação</Link></li>
+              <li><Link href="/categoria/seguranca" className="text-sm hover:text-foreground transition-colors duration-200">Segurança no Trânsito</Link></li>
+              <li><Link href="/categoria/prevencao" className="text-sm hover:text-foreground transition-colors duration-200">Prevenção de Acidentes</Link></li>
+              <li><Link href="/categoria/conscientizacao" className="text-sm hover:text-foreground transition-colors duration-200">Conscientização</Link></li>
               <li><Link href="/podcast" className="text-sm hover:text-foreground transition-colors duration-200">Podcast Na Pista</Link></li>
             </ul>
           </div>
@@ -49,7 +49,6 @@ export function BlogFooter() {
             <ul className="space-y-3">
               <li><a href="https://www.ifood.com.br" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-foreground transition-colors duration-200">ifood.com.br</a></li>
               <li><a href="https://restaurantes.ifood.com.br" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-foreground transition-colors duration-200">Portal de Restaurantes</a></li>
-              <li><Link href="/newsletter" className="text-sm hover:text-foreground transition-colors duration-200">Newsletter</Link></li>
             </ul>
           </div>
         </div>

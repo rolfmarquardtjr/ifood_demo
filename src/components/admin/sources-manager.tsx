@@ -27,7 +27,7 @@ export function SourcesManager({ sources: initialSources }: { sources: Source[] 
   const [dialogOpen, setDialogOpen] = useState(false);
   const [name, setName] = useState("");
   const [url, setUrl] = useState("");
-  const [category, setCategory] = useState("segurança");
+  const [category, setCategory] = useState("seguranca");
   const [selector, setSelector] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -41,7 +41,7 @@ export function SourcesManager({ sources: initialSources }: { sources: Source[] 
     });
     setLoading(false);
     setDialogOpen(false);
-    setName(""); setUrl(""); setCategory("segurança"); setSelector("");
+    setName(""); setUrl(""); setCategory("seguranca"); setSelector("");
     router.refresh();
   };
 
@@ -79,9 +79,9 @@ export function SourcesManager({ sources: initialSources }: { sources: Source[] 
                 <Select value={category} onValueChange={(v) => v && setCategory(v)}>
                   <SelectTrigger className="mt-1"><SelectValue /></SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="delivery">Logística & Entrega</SelectItem>
-                    <SelectItem value="restaurantes">Restaurantes & Parceiros</SelectItem>
-                    <SelectItem value="tendencias">Tendências & Inovação</SelectItem>
+                    <SelectItem value="seguranca">Segurança no Trânsito</SelectItem>
+                    <SelectItem value="prevencao">Prevenção de Acidentes</SelectItem>
+                    <SelectItem value="conscientizacao">Conscientização</SelectItem>
                     <SelectItem value="geral">Geral</SelectItem>
                   </SelectContent>
                 </Select>

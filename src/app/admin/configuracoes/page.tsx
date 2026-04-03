@@ -73,9 +73,9 @@ export default function AdminConfigPage() {
   // Dias da semana: [Dom, Seg, Ter, Qua, Qui, Sex, Sab]
   const [articleDays, setArticleDays] = useState([false, true, true, true, true, true, false]);
   const [podcastDays, setPodcastDays] = useState([false, true, false, false, true, false, false]);
-  const [delivery, setDelivery] = useState(40);
-  const [restaurantes, setRestaurantes] = useState(35);
-  const [tendencias, setTendencias] = useState(25);
+  const [seguranca, setSeguranca] = useState(40);
+  const [prevencao, setPrevencao] = useState(35);
+  const [conscientizacao, setConscientizacao] = useState(25);
 
   // API Keys
   const [googleKey, setGoogleKey] = useState("");
@@ -147,10 +147,10 @@ COMO VOCE DEVE FALAR:
         if (data.article_days) setArticleDays(data.article_days as boolean[]);
         if (data.podcast_days) setPodcastDays(data.podcast_days as boolean[]);
         if (data.category_proportions) {
-          const cp = data.category_proportions as { delivery?: number; restaurantes?: number; tendencias?: number };
-          setDelivery(cp.delivery || 40);
-          setRestaurantes(cp.restaurantes || 35);
-          setTendencias(cp.tendencias || 25);
+          const cp = data.category_proportions as { seguranca?: number; prevencao?: number; conscientizacao?: number };
+          setSeguranca(cp.seguranca || 40);
+          setPrevencao(cp.prevencao || 35);
+          setConscientizacao(cp.conscientizacao || 25);
         }
         if (data.api_keys) {
           const keys = data.api_keys as { google?: string; openai?: string; anthropic?: string };
@@ -200,7 +200,7 @@ COMO VOCE DEVE FALAR:
         articles_per_day: 1,
         article_days: articleDays,
         podcast_days: podcastDays,
-        category_proportions: { delivery, restaurantes, tendencias },
+        category_proportions: { seguranca, prevencao, conscientizacao },
         api_keys: {
           google: googleKey || undefined,
           openai: openaiKey || undefined,
@@ -382,15 +382,15 @@ COMO VOCE DEVE FALAR:
             <CardHeader><CardTitle className="text-lg">Proporção de Categorias</CardTitle></CardHeader>
             <CardContent className="space-y-4">
               <div>
-                <Label>Logística & Entrega: {delivery}%</Label>
-                <Slider value={[delivery]} onValueChange={(val) => { const v = Array.isArray(val) ? val[0] : val; setDelivery(v); setTendencias(100 - v - restaurantes); }} min={0} max={100} step={5} className="mt-2" />
+                <Label>Segurança no Trânsito: {seguranca}%</Label>
+                <Slider value={[seguranca]} onValueChange={(val) => { const v = Array.isArray(val) ? val[0] : val; setSeguranca(v); setConscientizacao(100 - v - prevencao); }} min={0} max={100} step={5} className="mt-2" />
               </div>
               <div>
-                <Label>Restaurantes & Parceiros: {restaurantes}%</Label>
-                <Slider value={[restaurantes]} onValueChange={(val) => { const v = Array.isArray(val) ? val[0] : val; setRestaurantes(v); setTendencias(100 - delivery - v); }} min={0} max={100} step={5} className="mt-2" />
+                <Label>Prevenção de Acidentes: {prevencao}%</Label>
+                <Slider value={[prevencao]} onValueChange={(val) => { const v = Array.isArray(val) ? val[0] : val; setPrevencao(v); setConscientizacao(100 - seguranca - v); }} min={0} max={100} step={5} className="mt-2" />
               </div>
               <div>
-                <Label>Tendências & Inovação: {tendencias}%</Label>
+                <Label>Conscientização: {conscientizacao}%</Label>
                 <p className="text-sm text-muted-foreground">(calculado automáticamente)</p>
               </div>
             </CardContent>
