@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <circle cx="100" cy="100" r="95" fill="#003399" stroke="#FFD700" stroke-width="5"/>
+  <text x="100" y="85" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="32" fill="#FFFFFF">DETRAN</text>
+  <text x="100" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="28" fill="#FFD700">SP</text>
+  <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-weight="400" font-size="14" fill="#FFFFFF">Motofrete</text>
+</svg>

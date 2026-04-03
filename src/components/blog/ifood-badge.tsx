@@ -4,14 +4,20 @@ import Image from "next/image";
 
 export function IFoodBadge() {
   return (
-    <div className="fixed bottom-6 right-6 z-[60]">
+    <a
+      href="https://www.detran.sp.gov.br/detransp/pb/servico/educacao/realizar_inscricao_para_curso_especializado_de_motofrete?id=carta_de_servico_realizar_inscricao_para_curso_especializado_de_motofrete"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-6 right-6 z-[60] group"
+      title="Curso de Motofrete — DETRAN SP"
+    >
       <Image
-        src="/logo-ifood-badge.png"
-        alt="Maio Amarelo 2026"
-        width={140}
-        height={140}
-        className="drop-shadow-xl opacity-90 hover:opacity-100 hover:scale-110 transition-all duration-300"
+        src="/logo-detran-sp.svg"
+        alt="DETRAN SP — Curso de Motofrete"
+        width={100}
+        height={100}
+        className="drop-shadow-xl opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 rounded-full"
       />
-    </div>
+    </a>
   );
 }
