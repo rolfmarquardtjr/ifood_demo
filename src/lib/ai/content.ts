@@ -96,7 +96,7 @@ export async function generatePodcastScript(
 
   const scriptInstructions = config.scriptPrompt || "";
 
-  const prompt = `Voce e o melhor roteirista de podcasts do Brasil. Vai criar o roteiro do Podcast iFood Insights, referencia em gastronomia, delivery e o ecossistema de alimentação.
+  const prompt = `Voce e o melhor roteirista de podcasts do Brasil. Vai criar o roteiro do Podcast Na Pista, referência em segurança no trânsito para entregadores.
 
 PERSONAGENS:
 ${characterDescriptions}
@@ -138,7 +138,7 @@ export async function generateArticleContent(
   originalSummary: string,
   category: string,
 ): Promise<{ content: string; summary: string; imagePrompt: string }> {
-  const prompt = `Você é um jornalista especializado em gastronomia e delivery, escrevendo para o ecossistema iFood.
+  const prompt = `Você é um comunicador do universo do delivery, escrevendo para ENTREGADORES e MOTOBOYS do iFood.
 
 Escreva um artigo completo em Markdown sobre o seguinte tema:
 
@@ -147,19 +147,19 @@ Resumo original: ${originalSummary}
 Categoria: ${category}
 
 REGRAS:
-- PÚBLICO: entregadores, restaurantes parceiros e consumidores do iFood.
-- Linguagem SIMPLES e DIRETA. Como se estivesse explicando pra quem vive o dia a dia do delivery.
+- PÚBLICO: motoboys, entregadores de app, quem vive no corre.
+- Linguagem SIMPLES e DIRETA, como se fosse um papo entre parceiros.
+- Contexto: Maio Amarelo 2026 - no trânsito, enxergar o outro salva vidas.
 - Escreva em português brasileiro natural e acessível
 - Use Markdown com ## para subtítulos, listas, tabelas quando relevante
 - O artigo deve ter entre 400-800 palavras
-- Inclua dados e informações práticas sobre food delivery, tendências gastronômicas e food tech
-- Dê DICAS PRÁTICAS: o que fazer, o que evitar, como melhorar operações
-- Contexto iFood Insights: inovação e tendências no mercado de alimentação e delivery
-- Termine com orientações práticas que o leitor pode aplicar HOJE
-- Use exemplos do cotidiano de quem trabalha com delivery, restaurante ou consome via app
+- Inclua dicas práticas para entregadores de moto
+- Dê DICAS PRÁTICAS: o que fazer, o que evitar, como se cuidar no trânsito
+- Use exemplos do dia a dia: corredor, chuva, bag, celular no suporte, rotas
+- Termine com orientações práticas que o entregador pode aplicar HOJE
 
 Responda APENAS com um JSON no formato:
-{"content": "conteúdo em markdown", "summary": "resumo de 1-2 frases focado no ecossistema delivery", "imagePrompt": "professional photo of food delivery, restaurant kitchen, delivery app, food photography, brazilian city, realistic photography style"}
+{"content": "conteúdo em markdown", "summary": "resumo de 1-2 frases focado no entregador", "imagePrompt": "professional photo of motorcycle delivery, motoboy, urban delivery, São Paulo streets, delivery backpack, realistic photography style"}
 
 Não inclua nenhum texto fora do JSON.`;
 

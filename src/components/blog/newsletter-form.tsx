@@ -42,10 +42,10 @@ export function NewsletterForm({ variant = "banner" }: { variant?: "banner" | "p
             Newsletter
           </div>
           <h2 className="text-3xl md:text-4xl font-heading text-foreground mb-4 tracking-tight">
-            Receba as novidades do mundo delivery
+            Cola com a gente, parceiro
           </h2>
           <p className="text-muted-foreground text-base mb-10 max-w-lg mx-auto">
-            Fique por dentro das tendências de food delivery, novidades dos restaurantes parceiros e inovações do iFood.
+            Receba dicas de segurança, novidades do app e histórias de quem vive no corre. Direto no seu email.
           </p>
 
           {status === "success" ? (

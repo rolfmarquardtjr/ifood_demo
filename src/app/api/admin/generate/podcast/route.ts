@@ -59,7 +59,7 @@ export async function POST(request: Request) {
     const [podcast] = await db
       .insert(podcasts)
       .values({
-        title: `Podcast iFood Insights — ${new Date().toLocaleDateString("pt-BR", { day: "numeric", month: "long", year: "numeric" })}`,
+        title: `Podcast Na Pista — ${new Date().toLocaleDateString("pt-BR", { day: "numeric", month: "long", year: "numeric" })}`,
         description: `Notícias do dia: ${selectedArticles.map((a) => a.title).join(", ")}`,
         audioUrl,
         durationSeconds,

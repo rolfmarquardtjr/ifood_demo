@@ -3,7 +3,7 @@ import { getDb, hasDb } from "@/lib/db";
 import { articles, podcasts } from "@/lib/db/schema";
 import { eq, desc } from "drizzle-orm";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ifood-demo-blog.vercel.app";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ifood-na-pista.vercel.app";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes: MetadataRoute.Sitemap = [

@@ -10,7 +10,7 @@ const categories = [
   { name: "Logística & Entrega", href: "/categoria/delivery" },
   { name: "Restaurantes & Parceiros", href: "/categoria/restaurantes" },
   { name: "Tendências & Inovação", href: "/categoria/tendencias" },
-  { name: "Podcast iFood Insights", href: "/podcast" },
+  { name: "Podcast Na Pista", href: "/podcast" },
 ];
 
 export function BlogHeader() {
@@ -29,7 +29,7 @@ export function BlogHeader() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-[72px]">
           <Link href="/" className="flex items-center gap-3 group">
-            <Image src="/logo-ifood-header.png" alt="iFood Insights" width={120} height={24} className="transition-all duration-300" />
+            <Image src="/logo-ifood-header.png" alt="iFood Na Pista" width={120} height={24} className="transition-all duration-300" />
           </Link>
 
           <nav className="hidden md:flex items-center gap-0.5">

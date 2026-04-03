@@ -73,11 +73,10 @@ export default async function HomePage() {
 
           <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-5xl md:text-7xl font-heading text-foreground tracking-tight mb-6">
-              iFood <span className="text-[#EA1D2C]">Insights</span>
+              iFood <span className="text-[#EA1D2C]">Na Pista</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Tendências em delivery, gastronomia e inovação.
-              O futuro da alimentação começa aqui.
+              Segurança pra quem vive no corre. Maio Amarelo é todo dia, parceiro.
             </p>
           </div>
         </section>
@@ -181,21 +180,21 @@ export default async function HomePage() {
             {[
               {
                 title: "Logística & Entrega",
-                desc: "Rotas inteligentes, última milha, tecnologia de rastreamento e otimização de entregas em tempo real",
+                desc: "Dicas pra quem tá no corre: como se virar nas corridas, cuidar da moto e chegar bem em casa",
                 color: "from-red-500/20 to-red-600/10",
                 iconPath:
                   "M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0H21M3.375 14.25H21a1.125 1.125 0 001.125-1.125v-3.75a1.125 1.125 0 00-1.125-1.125H3.375A1.125 1.125 0 002.25 9.375v3.75c0 .621.504 1.125 1.125 1.125z",
               },
               {
                 title: "Restaurantes & Parceiros",
-                desc: "Histórias de sucesso, dicas para restaurantes, cardápios digitais e estratégias de crescimento",
+                desc: "Os parceiros que fazem a parada acontecer. Histórias de quem tá junto nessa",
                 color: "from-orange-500/20 to-orange-600/10",
                 iconPath:
                   "M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.349m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016A3.001 3.001 0 0021 9.349m-18 0a2.999 2.999 0 00.621-1.853L4.5 5.25A2.25 2.25 0 016.75 3h10.5a2.25 2.25 0 012.25 2.25v2.246a2.999 2.999 0 00.621 1.853",
               },
               {
                 title: "Tendências & Inovação",
-                desc: "Food tech, dark kitchens, inteligência artificial aplicada e o futuro do mercado de alimentação",
+                desc: "O que tá mudando no mundo do delivery, apps novos e tecnologia pra facilitar o trampo",
                 color: "from-emerald-500/20 to-emerald-600/10",
                 iconPath:
                   "M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18",

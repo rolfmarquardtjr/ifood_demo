@@ -44,7 +44,7 @@ export default function AdminLoginPage() {
       <Card className="w-full max-w-sm">
         <CardHeader className="text-center">
           <div className="mx-auto w-12 h-12 rounded-xl bg-[#EA1D2C] flex items-center justify-center font-bold text-xl text-white mb-2">iF</div>
-          <CardTitle className="text-xl">Admin iFood Insights</CardTitle>
+          <CardTitle className="text-xl">Admin iFood Na Pista</CardTitle>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">

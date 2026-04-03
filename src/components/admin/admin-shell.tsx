@@ -53,7 +53,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
       <aside className="w-60 border-r border-white/[0.06] bg-[#0a1628] flex flex-col">
         <div className="p-4 border-b border-white/[0.06]">
           <Link href="/admin/dashboard" className="flex items-center gap-3">
-            <Image src="/logo-ifood-header.png" alt="iFood Insights" width={100} height={20} />
+            <Image src="/logo-ifood-header.png" alt="iFood Na Pista" width={100} height={20} />
             <span className="text-[10px] font-bold text-[#EA1D2C] uppercase tracking-widest">Admin</span>
           </Link>
         </div>

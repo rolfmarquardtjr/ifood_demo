@@ -13,11 +13,11 @@ export function BlogFooter() {
           <div className="md:col-span-5">
             <div className="mb-6">
               <Link href="/">
-                <Image src="/logo-ifood-header.png" alt="iFood Insights" width={140} height={28} className="transition-all duration-300" />
+                <Image src="/logo-ifood-header.png" alt="iFood Na Pista" width={140} height={28} className="transition-all duration-300" />
               </Link>
             </div>
             <p className="text-sm leading-relaxed max-w-sm">
-              Blog do iFood sobre tendências de delivery, restaurantes parceiros e inovação na entrega de comida.
+              Blog do iFood pra quem vive no corre. Segurança no trânsito e dicas pro dia a dia do entregador.
             </p>
             <div className="flex gap-3 mt-6">
               <a href="https://www.facebook.com/ifood" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] flex items-center justify-center text-white/40 hover:text-white/70 transition-all">
@@ -39,13 +39,13 @@ export function BlogFooter() {
               <li><Link href="/categoria/delivery" className="text-sm hover:text-foreground transition-colors duration-200">Logística & Entrega</Link></li>
               <li><Link href="/categoria/restaurantes" className="text-sm hover:text-foreground transition-colors duration-200">Restaurantes & Parceiros</Link></li>
               <li><Link href="/categoria/tendencias" className="text-sm hover:text-foreground transition-colors duration-200">Tendências & Inovação</Link></li>
-              <li><Link href="/podcast" className="text-sm hover:text-foreground transition-colors duration-200">Podcast iFood Insights</Link></li>
+              <li><Link href="/podcast" className="text-sm hover:text-foreground transition-colors duration-200">Podcast Na Pista</Link></li>
             </ul>
           </div>
 
           {/* Links */}
           <div className="md:col-span-4">
-            <h3 className="text-foreground font-semibold text-xs uppercase tracking-widest mb-5">iFood Insights</h3>
+            <h3 className="text-foreground font-semibold text-xs uppercase tracking-widest mb-5">iFood Na Pista</h3>
             <ul className="space-y-3">
               <li><a href="https://www.ifood.com.br" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-foreground transition-colors duration-200">ifood.com.br</a></li>
               <li><a href="https://restaurantes.ifood.com.br" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-foreground transition-colors duration-200">Portal de Restaurantes</a></li>
@@ -55,8 +55,8 @@ export function BlogFooter() {
         </div>
 
         <div className="mt-16 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs">&copy; {new Date().getFullYear()} iFood Insights. Todos os direitos reservados.</p>
-          <p className="text-xs">O futuro do delivery começa aqui.</p>
+          <p className="text-xs">&copy; {new Date().getFullYear()} iFood Na Pista. Todos os direitos reservados.</p>
+          <p className="text-xs">Pega a visão: no trânsito, enxergar o outro salva vidas. 🏍️</p>
         </div>
       </div>
 

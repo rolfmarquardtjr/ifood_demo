@@ -42,7 +42,7 @@ export function PodcastPlayer({ title, description, audioUrl, compact = false }:
 
   const progress = duration ? (currentTime / duration) * 100 : 0;
 
-  // Extract date from title like "Podcast iFood Insights — 19 de março de 2026"
+  // Extract date from title like "Podcast Na Pista — 19 de março de 2026"
   const dateSplit = title.split("—").length > 1 ? title.split("—")[1].trim() : title.split("-").length > 1 ? title.split("-").slice(1).join("-").trim() : null;
   const podcastDate = dateSplit;
 
@@ -62,7 +62,7 @@ export function PodcastPlayer({ title, description, audioUrl, compact = false }:
           </button>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 flex-wrap">
-              <h3 className="font-heading text-sm sm:text-base font-bold text-foreground">{podcastDate ? "Podcast iFood Insights" : title}</h3>
+              <h3 className="font-heading text-sm sm:text-base font-bold text-foreground">{podcastDate ? "Podcast Na Pista" : title}</h3>
               {podcastDate && (
                 <span className="text-[10px] text-muted-foreground">{podcastDate}</span>
               )}
@@ -115,7 +115,7 @@ export function PodcastPlayer({ title, description, audioUrl, compact = false }:
               <span className="text-[11px] text-muted-foreground">{podcastDate}</span>
             )}
           </div>
-          <h3 className="font-heading text-lg sm:text-2xl font-bold text-foreground">Podcast iFood Insights</h3>
+          <h3 className="font-heading text-lg sm:text-2xl font-bold text-foreground">Podcast Na Pista</h3>
           <p className="text-xs sm:text-sm text-muted-foreground mt-0.5 line-clamp-2">{description}</p>
 
           {/* Progress bar */}

@@ -36,13 +36,13 @@ export default async function PodcastPage() {
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-[#EA1D2C]"></span>
               </span>
               <span className="text-xs font-bold text-foreground tracking-widest uppercase">
-                iFood no Ar
+                Na Pista no Ar
               </span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
               <span className="text-white">Podcast</span>
-              <span className="text-white/80"> iFood Insights</span>
+              <span className="text-white/80"> Na Pista</span>
             </h1>
             <Image
               src="/logo-ifood-header.png"
@@ -53,7 +53,7 @@ export default async function PodcastPage() {
               priority
             />
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Descubra as tendências do mercado de delivery, histórias de restaurantes parceiros e inovações em food tech.
+              Tião e Juh batem um papo sobre o dia a dia do entregador, segurança no trânsito e o corre do delivery.
             </p>
           </div>
         </div>

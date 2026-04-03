@@ -40,7 +40,7 @@ async function searchRealNews(
           parts: [{
             text: `Busque as notícias mais recentes (últimos 7 dias) sobre: ${topic}.${sourceContext}
 
-CONTEXTO: Este conteúdo é para o blog iFood Insights, cobrindo tendências de food delivery, restaurantes parceiros e inovação no ecossistema de alimentação.
+CONTEXTO: Este conteúdo é para o blog iFood Na Pista, focado em segurança no trânsito para motoboys, dicas de entrega e novidades do mundo do entregador. Maio Amarelo 2026: no trânsito, enxergar o outro salva vidas.
 
 REGRAS:
 - Use APENAS informações reais encontradas na busca, NUNCA invente notícias

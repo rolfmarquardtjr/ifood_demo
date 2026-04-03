@@ -11,9 +11,9 @@ const categoryLabels: Record<string, string> = {
 };
 
 const categoryDescriptions: Record<string, string> = {
-  delivery: "Notícias sobre rotas inteligentes, última milha, tecnologia de rastreamento e otimização de entregas em tempo real.",
-  restaurantes: "Histórias de sucesso, dicas para restaurantes, cardápios digitais e estratégias de crescimento no iFood.",
-  tendencias: "Food tech, dark kitchens, inteligência artificial aplicada e o futuro do mercado de alimentação.",
+  delivery: "Tudo sobre o corre do dia a dia: dicas de entrega, logística, como otimizar as corridas e chegar bem em casa.",
+  restaurantes: "Histórias dos parceiros que fazem a parada acontecer. Restaurantes, cozinhas e quem tá junto nessa.",
+  tendencias: "O que tá mudando no mundo do delivery: apps, tecnologia, novidades e o futuro do trampo.",
 };
 
 export default async function CategoryPage({ params }: { params: Promise<{ categoria: string }> }) {

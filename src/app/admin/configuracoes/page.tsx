@@ -86,37 +86,36 @@ export default function AdminConfigPage() {
   const [ttsProvider, setTtsProvider] = useState("gemini");
   const [ttsModel, setTtsModel] = useState("gemini-2.5-flash-tts");
   const [podcastDuration, setPodcastDuration] = useState(10);
-  const [podcastScene, setPodcastScene] = useState("Estudio de podcast profissional com iluminacao neon vermelha, microfones de mesa, duas pessoas sentadas frente a frente com energia alta. Clima de programa de radio matinal: cafe e comida na mesa, tela com manchetes sobre food delivery ao fundo, conversa fluindo naturalmente entre dois profissionais que se conhecem ha anos e adoram debater sobre gastronomia e delivery.");
+  const [podcastScene, setPodcastScene] = useState("Dois entregadores sentados na calçada com as motos estacionadas, bags do lado, tomando um café entre corridas. Clima de conversa real entre parceiros que se encontram todo dia.");
   const [podcastScriptPrompt, setPodcastScriptPrompt] = useState(`ESTRUTURA DO EPISODIO:
-1. ABERTURA (2-3 falas): Cumprimento rapido e direto. "Fala pessoal!" / "Salve!" - ja emenda nas manchetes do dia sem enrolacao.
-2. MANCHETES (2-3 falas): Antecipe os assuntos do episódio de forma provocativa pra prender o ouvinte.
-3. DISCUSSAO (blocos por notícia): Cada notícia com analise, dados concretos, impacto pratico e o que muda pro profissional do setor.
-4. ENCERRAMENTO (2-3 falas): Resumo rapido e convite pra seguir o Podcast iFood Insights.
+1. ABERTURA: Cumprimento de motoboy, já emenda na parada do dia.
+2. MANCHETES: O que tá rolando no mundo do entregador.
+3. DISCUSSAO: Cada notícia com impacto pro motoboy.
+4. SEGURANÇA: Dica prática de segurança no trânsito (Maio Amarelo).
+5. ENCERRAMENTO: Resumo e "se cuida no corre, parceiro".
 
 REGRAS ABSOLUTAS:
 - Os personagens NUNCA falam de si mesmos. Nada de "na minha experiencia", "eu que trabalho ha anos". ZERO autopromocao.
 - Foco 100% nas NOTICIAS e no IMPACTO PRATICO pro ouvinte.
-- Conversa REAL: um fala, o outro reage, complementa, discorda, provoca. Bate-papo entre colegas.
-- Reacoes naturais: "Eita!", "Olha so...", "Pois e...", "Exatamente!", "Mas calma ai..."
+- Conversa REAL: um fala, o outro reage, complementa, discorda, provoca. Bate-papo entre parceiros.
+- Reacoes naturais: "Eita!", "Pega a visão...", "É nóis...", "Parceiro!", "Mas calma aí..."
 - Cada fala 1 a 3 frases. Ninguem faz discurso longo.
 - Traga NUMEROS e DADOS das notícias.
-- Transicoes naturais entre assuntos.
-- Portugues brasileiro natural, coloquial profissional.
+- Gírias do dia a dia: corrida, trampo, no corre, bag, baú, corredor, costurar.
+- Portugues brasileiro natural de motoboy.
 - Ritmo dinamico: empolgacao, seriedade, humor leve.`);
-  const [podcastDirectorsNotes, setPodcastDirectorsNotes] = useState("ESSENCIAL: Isso e uma conversa REAL entre dois amigos que sao feras em gastronomia e delivery. Um fala algo, o outro REAGE de verdade - concorda enfatico, discorda com argumento, ri de uma situacao absurda, fica indignado com uma estatistica do mercado. Varie MUITO o tom: momentos de empolgacao rapida, momentos de seriedade com voz mais grave, momentos de humor com leveza. Use pausas curtas antes de revelar um dado impactante. NUNCA soe como dois robos lendo um roteiro. A energia deve ser contagiante - o ouvinte tem que sentir que ta ali na conversa com eles.");
-  const [podcastStyle, setPodcastStyle] = useState("Podcast informativo e descontraido sobre food delivery e gastronomia no Brasil. Linguagem acessivel, com analogias do dia a dia.");
+  const [podcastDirectorsNotes, setPodcastDirectorsNotes] = useState("ESSENCIAL: Isso é conversa REAL entre dois motoboys que se conhecem há anos. Um fala, o outro REAGE - concorda, discorda, ri, fica indignado com uma notícia de acidente. Use gírias naturalmente: 'pega a visão', 'no corre', 'parceiro', 'corredor'. Mas quando o assunto é segurança, o tom fica sério SEM perder a naturalidade. A mensagem do Maio Amarelo 2026 'enxergar o outro salva vidas' tem que estar no DNA de cada episódio.");
+  const [podcastStyle, setPodcastStyle] = useState("Podcast Na Pista do iFood - feito POR entregadores PRA entregadores. Dois motoboys veteranos discutem o corre do dia: segurança no trânsito, dicas de entrega, novidades do app e o que tá rolando no Maio Amarelo. Linguagem de quem vive no corredor, usa bag e baú todo dia. Ritmo de conversa entre parceiros no ponto de espera. Nada de papo formal - aqui é conversa de quem sabe o que é pegar chuva na Marginal.");
   const [characters, setCharacters] = useState<PodcastCharacter[]>([
-    { name: "Ivo", voice: "Puck", role: "Apresentador principal", instructions: "Tom animado e informativo." },
-    { name: "Flora", voice: "Kore", role: "Co-apresentadora", instructions: "Tom analitico e complementar." },
+    { name: "Tião", voice: "Puck", role: "Apresentador principal - motoboy raiz", instructions: "Tom de quem vive o corre todo dia. Fala como motoboy de SP, usa gírias naturalmente mas passa informação séria sobre segurança." },
+    { name: "Juh", voice: "Kore", role: "Co-apresentadora - entregadora experiente", instructions: "Tom direto e esperto. Traz dados e contexto mas fala como parceira, não como professora. Reage com emoção real." },
   ]);
 
   // Article Audio
   const [articleAudioVoice, setArticleAudioVoice] = useState("Charon");
-  const [articleAudioScene, setArticleAudioScene] = useState("Estudio de broadcast profissional, falando diretamente com o ouvinte com confianca e energia");
-  const [articleAudioDirectorsNotes, setArticleAudioDirectorsNotes] = useState("Fale com emocao autentica, varie o ritmo naturalmente - mais rapido quando empolgado, mais devagar para enfase. Use pausas para efeito dramatico. Soe como uma pessoa real apaixonada pelo assunto, NAO um robo ou leitor de texto.");
-  const [articleAudioPrompt, setArticleAudioPrompt] = useState(`Voce e um especialista renomado em gastronomia, food delivery e food tech no Brasil. Voce tem 25 anos de experiencia no setor, ja consultou para as maiores redes de alimentação do pais e e referencia quando o assunto e delivery, tendências gastronômicas e inovação no food service.
-
-Voce vai gravar um AUDIO sobre a notícia abaixo. Nao e uma leitura de artigo. E voce, o especialista, comentando a notícia com PAIXAO, AUTORIDADE e EMOCAO como se estivesse num papo de radio ou num programa de TV sobre gastronomia e delivery.
+  const [articleAudioScene, setArticleAudioScene] = useState("Motoboy veterano gravando um áudio pro grupo de WhatsApp dos entregadores");
+  const [articleAudioDirectorsNotes, setArticleAudioDirectorsNotes] = useState("Fale como motoboy que sabe das coisas. Emoção real, ritmo natural. NAO soe robotico. Quando falar de acidente, o tom muda - fica sério porque sabe que podia ser qualquer um dos parceiros.");
+  const [articleAudioPrompt, setArticleAudioPrompt] = useState(`Você é um motoboy experiente que virou comunicador. Fala como entregador mas com informação de qualidade. Reporta notícias pro parceiro entregador como se tivesse explicando no ponto de espera entre corridas. Tom: direto, engajado, com a energia de quem vive o trânsito. NUNCA fale de si mesmo. Foco nos FATOS. Maio Amarelo 2026: no trânsito, enxergar o outro salva vidas. Duração 1-2 min (150-300 palavras). Português brasileiro natural de motoboy.
 
 COMO VOCE DEVE FALAR:
 - Comece com impacto: reaja a notícia como especialista

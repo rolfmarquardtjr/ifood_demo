@@ -16,16 +16,16 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "iFood Insights | Tendências em Delivery e Gastronomia",
-    template: "%s | iFood Insights",
+    default: "iFood Na Pista | Maio Amarelo 2026 — No Trânsito, Enxergar o Outro é Salvar Vidas",
+    template: "%s | iFood Na Pista",
   },
   description:
-    "Blog do iFood sobre tendências em delivery, gastronomia, restaurantes parceiros e inovação no setor de alimentação.",
-  keywords: ["delivery", "gastronomia", "restaurantes", "ifood", "tendências"],
+    "Blog do iFood pra quem vive no corre. Segurança no trânsito, dicas de entrega e novidades pra quem roda de moto todo dia. Maio Amarelo é todo dia, parceiro.",
+  keywords: ["motoboy", "entregador", "motoqueiro", "maio amarelo", "segurança no trânsito", "delivery", "ifood", "entregas"],
   openGraph: {
-    title: "iFood Insights | Tendências em Delivery e Gastronomia",
-    description: "Blog do iFood sobre tendências em delivery, gastronomia, restaurantes parceiros e inovação no setor de alimentação.",
-    siteName: "iFood Insights",
+    title: "iFood Na Pista | Maio Amarelo 2026 — No Trânsito, Enxergar o Outro é Salvar Vidas",
+    description: "Blog do iFood pra quem vive no corre. Segurança no trânsito, dicas de entrega e novidades pra quem roda de moto todo dia. Maio Amarelo é todo dia, parceiro.",
+    siteName: "iFood Na Pista",
     locale: "pt_BR",
     type: "website",
   },

@@ -126,7 +126,7 @@ export async function generateImage(prompt: string): Promise<ImageResult> {
   const config = await getImageConfig();
   const keys = await getApiKeys();
 
-  const fullPrompt = `Professional photojournalistic image for a Brazilian food delivery and gastronomy news article. Style: realistic photography, editorial quality, sharp focus, natural lighting, no cartoons, no illustrations, no drawings, no AI artifacts. The image should look like a real photo from a news agency (Reuters, AFP style). Subject matter: food delivery, restaurant kitchen, delivery app, food photography. Topic: ${prompt}`;
+  const fullPrompt = `Professional photojournalistic image for a Brazilian motorcycle delivery and food delivery news article. Style: realistic photography, editorial quality. The image should show real scenes of motoboys, delivery motorcycles, urban São Paulo streets, delivery backpacks. Topic: ${prompt}`;
 
   if (config.provider === "google") {
     if (!keys.google) throw new Error("Chave de API do Google nao configurada");
