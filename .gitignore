@@ -1,0 +1,14 @@
+node_modules
+.next
+.env.local
+.env*.local
+.vercel
+
+# Docs internos (credenciais)
+docs/
+
+# WhatsApp bot session
+scripts/whatsapp/auth_session/
+scripts/whatsapp/.wwebjs_auth/
+scripts/whatsapp/.wwebjs_cache/
+scripts/whatsapp/node_modules/
