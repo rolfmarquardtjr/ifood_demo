@@ -21,11 +21,18 @@ export default async function PodcastPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Gradient Hero */}
+      {/* Video Hero */}
       <div className="relative w-full h-[350px] md:h-[500px] overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#EA1D2C] via-[#b8151f] to-[#8a1018]" />
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-50" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/transito-bg.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
 
         {/* Content over gradient */}
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
