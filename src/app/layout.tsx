@@ -6,10 +6,10 @@ import "./globals.css";
 
 const ifoodTextos = localFont({
   src: [
-    { path: "../../public/fonts/iFoodRCTextos-Light.woff2", weight: "300", style: "normal" },
-    { path: "../../public/fonts/iFoodRCTextos-Regular.woff2", weight: "400", style: "normal" },
-    { path: "../../public/fonts/iFoodRCTextos-Medium.woff2", weight: "500", style: "normal" },
-    { path: "../../public/fonts/iFoodRCTextos-Bold.woff2", weight: "700", style: "normal" },
+    { path: "./fonts/iFoodRCTextos-Light.woff2", weight: "300", style: "normal" },
+    { path: "./fonts/iFoodRCTextos-Regular.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/iFoodRCTextos-Medium.woff2", weight: "500", style: "normal" },
+    { path: "./fonts/iFoodRCTextos-Bold.woff2", weight: "700", style: "normal" },
   ],
   variable: "--font-ifood-textos",
   display: "swap",
@@ -17,10 +17,10 @@ const ifoodTextos = localFont({
 
 const ifoodTitulos = localFont({
   src: [
-    { path: "../../public/fonts/iFoodRCTitulos-Light.woff2", weight: "300", style: "normal" },
-    { path: "../../public/fonts/iFoodRCTitulos-Regular.woff2", weight: "400", style: "normal" },
-    { path: "../../public/fonts/iFoodRCTitulos-Medium.woff2", weight: "500", style: "normal" },
-    { path: "../../public/fonts/iFoodRCTitulos-Bold.woff2", weight: "700", style: "normal" },
+    { path: "./fonts/iFoodRCTitulos-Light.woff2", weight: "300", style: "normal" },
+    { path: "./fonts/iFoodRCTitulos-Regular.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/iFoodRCTitulos-Medium.woff2", weight: "500", style: "normal" },
+    { path: "./fonts/iFoodRCTitulos-Bold.woff2", weight: "700", style: "normal" },
   ],
   variable: "--font-ifood-titulos",
   display: "swap",
