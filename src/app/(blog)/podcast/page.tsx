@@ -67,7 +67,7 @@ export default async function PodcastPage() {
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
-              Tião e Juh batem um papo sobre o dia a dia do entregador, segurança no trânsito e o corre do delivery.
+              Faísca e Braba batem um papo sobre o dia a dia do entregador, segurança no trânsito e o corre do delivery.
             </p>
           </div>
         </div>

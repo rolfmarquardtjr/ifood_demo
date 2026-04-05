@@ -46,8 +46,8 @@ const DEFAULTS: Record<string, unknown> = {
     ttsProvider: "gemini",
     ttsModel: "gemini-2.5-flash-tts",
     characters: [
-      { name: "Tião", voice: "Puck", role: "Apresentador principal - motoboy raiz", instructions: "Tom de quem vive o corre todo dia. Fala como motoboy de SP, usa gírias naturalmente mas passa informação séria sobre segurança." },
-      { name: "Juh", voice: "Kore", role: "Co-apresentadora - entregadora experiente", instructions: "Tom direto e esperto. Traz dados e contexto mas fala como parceira, não como professora. Reage com emoção real." },
+      { name: "Faísca", voice: "Charon", role: "Apresentador principal - motoboy raiz", instructions: "Tom de quem vive o corre todo dia. Fala como motoboy de SP, usa gírias naturalmente mas passa informação séria sobre segurança." },
+      { name: "Braba", voice: "Kore", role: "Co-apresentadora - entregadora experiente", instructions: "Tom direto e esperto. Traz dados e contexto mas fala como parceira, não como professora. Reage com emoção real." },
     ],
     style: "Podcast Na Pista do iFood - feito POR entregadores PRA entregadores. Dois motoboys veteranos discutem o corre do dia: segurança no trânsito, dicas de entrega, novidades do app e o que tá rolando no Maio Amarelo. Linguagem de quem vive no corredor, usa bag e baú todo dia. Ritmo de conversa entre parceiros no ponto de espera. Nada de papo formal - aqui é conversa de quem sabe o que é pegar chuva na Marginal.",
     scene: "Dois entregadores sentados na calçada com as motos estacionadas, bags do lado, tomando um café entre corridas. Clima de conversa real entre parceiros que se encontram todo dia.",

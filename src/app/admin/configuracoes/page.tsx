@@ -107,8 +107,8 @@ REGRAS ABSOLUTAS:
   const [podcastDirectorsNotes, setPodcastDirectorsNotes] = useState("ESSENCIAL: Isso é conversa REAL entre dois motoboys que se conhecem há anos. Um fala, o outro REAGE - concorda, discorda, ri, fica indignado com uma notícia de acidente. Use gírias naturalmente: 'pega a visão', 'no corre', 'parceiro', 'corredor'. Mas quando o assunto é segurança, o tom fica sério SEM perder a naturalidade. A mensagem do Maio Amarelo 2026 'enxergar o outro salva vidas' tem que estar no DNA de cada episódio.");
   const [podcastStyle, setPodcastStyle] = useState("Podcast Na Pista do iFood - feito POR entregadores PRA entregadores. Dois motoboys veteranos discutem o corre do dia: segurança no trânsito, dicas de entrega, novidades do app e o que tá rolando no Maio Amarelo. Linguagem de quem vive no corredor, usa bag e baú todo dia. Ritmo de conversa entre parceiros no ponto de espera. Nada de papo formal - aqui é conversa de quem sabe o que é pegar chuva na Marginal.");
   const [characters, setCharacters] = useState<PodcastCharacter[]>([
-    { name: "Tião", voice: "Puck", role: "Apresentador principal - motoboy raiz", instructions: "Tom de quem vive o corre todo dia. Fala como motoboy de SP, usa gírias naturalmente mas passa informação séria sobre segurança." },
-    { name: "Juh", voice: "Kore", role: "Co-apresentadora - entregadora experiente", instructions: "Tom direto e esperto. Traz dados e contexto mas fala como parceira, não como professora. Reage com emoção real." },
+    { name: "Faísca", voice: "Charon", role: "Apresentador principal - motoboy raiz", instructions: "Tom de quem vive o corre todo dia. Fala como motoboy de SP, usa gírias naturalmente mas passa informação séria sobre segurança." },
+    { name: "Braba", voice: "Kore", role: "Co-apresentadora - entregadora experiente", instructions: "Tom direto e esperto. Traz dados e contexto mas fala como parceira, não como professora. Reage com emoção real." },
   ]);
 
   // Article Audio

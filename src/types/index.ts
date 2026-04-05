@@ -8,7 +8,7 @@ export interface ArticleSource {
 }
 
 export interface PodcastSegment {
-  speaker: "ivo" | "flora";
+  speaker: "faisca" | "braba";
   text: string;
 }
 
