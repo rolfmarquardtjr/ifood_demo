@@ -333,17 +333,24 @@ export default function MissaoPage() {
   // ─── INTRO ─────────────────────────────────────────────────────────────────
   if (phase === "intro") {
     const visible = INTRO_LINES.slice(0, introLineIndex);
+    // Show only the last few lines to prevent overflow on mobile
+    const maxVisible = 6;
+    const displayLines = visible.length > maxVisible ? visible.slice(-maxVisible) : visible;
     return (
-      <div className="min-h-[100dvh] bg-black flex flex-col items-center justify-center text-white px-8 relative overflow-hidden">
+      <div className="min-h-[100dvh] bg-black flex flex-col items-center justify-center text-white px-6 sm:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_#EA1D2C05_0%,_transparent_50%)] pointer-events-none" />
         <div className="max-w-md w-full space-y-1.5 relative z-10">
-          {visible.map((line, i) => line.text === "" ? <div key={i} className="h-6" /> : (
-            <p key={i} className={`font-semibold leading-snug transition-all duration-700 ${i === visible.length - 1 ? (line.big ? "text-5xl md:text-7xl font-black text-[#EA1D2C] font-heading" : "text-xl md:text-2xl text-white") : (line.big ? "text-5xl md:text-7xl font-black text-[#EA1D2C]/30 font-heading" : "text-xl md:text-2xl text-white/15")}`}>
-              {line.text}
-            </p>
-          ))}
+          {displayLines.map((line, i) => {
+            const isLast = i === displayLines.length - 1;
+            if (line.text === "") return <div key={i} className="h-4 sm:h-6" />;
+            return (
+              <p key={line.text} className={`font-semibold leading-snug transition-all duration-700 ${isLast ? (line.big ? "text-3xl sm:text-5xl md:text-7xl font-black text-[#EA1D2C] font-heading" : "text-lg sm:text-xl md:text-2xl text-white") : (line.big ? "text-3xl sm:text-5xl md:text-7xl font-black text-[#EA1D2C]/30 font-heading" : "text-lg sm:text-xl md:text-2xl text-white/15")}`}>
+                {line.text}
+              </p>
+            );
+          })}
         </div>
-        <div className="absolute bottom-10 flex gap-1">
+        <div className="absolute bottom-8 sm:bottom-10 flex gap-1">
           {INTRO_LINES.filter(l => l.text !== "").map((_, i) => (
             <div key={i} className={`h-1 rounded-full transition-all duration-300 ${i < visible.filter(l => l.text !== "").length ? 'w-3 bg-[#EA1D2C]' : 'w-1.5 bg-white/10'}`} />
           ))}
