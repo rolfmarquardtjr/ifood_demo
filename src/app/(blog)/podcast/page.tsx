@@ -22,7 +22,7 @@ export default async function PodcastPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Video Hero */}
-      <div className="relative w-full h-[350px] md:h-[500px] overflow-hidden">
+      <div className="relative w-full h-[450px] md:h-[600px] overflow-hidden">
         <video
           autoPlay
           muted
@@ -32,34 +32,41 @@ export default async function PodcastPage() {
         >
           <source src="/transito-bg.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+        {/* Dark overlay for contrast */}
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
 
-        {/* Content over gradient */}
-        <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
-          <div className="max-w-5xl mx-auto text-center">
-            <div className="inline-flex items-center gap-3 mb-6 px-5 py-2.5 rounded-full bg-card/60 backdrop-blur-xl border border-border shadow-2xl">
-              <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#EA1D2C] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-[#EA1D2C]"></span>
+        {/* Content centered over video */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="max-w-5xl mx-auto px-6 text-center">
+            {/* iFood logo - bigger */}
+            <Image
+              src="/logo-ifood-header.png"
+              alt="iFood"
+              width={300}
+              height={80}
+              className="mx-auto mb-8 h-16 sm:h-20 md:h-24 w-auto object-contain brightness-0 invert"
+              priority
+            />
+
+            {/* Live badge */}
+            <div className="inline-flex items-center gap-3 mb-8 px-6 py-3 rounded-full bg-[#EA1D2C]/90 backdrop-blur-sm shadow-2xl shadow-[#EA1D2C]/30">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
               </span>
-              <span className="text-xs font-bold text-foreground tracking-widest uppercase">
+              <span className="text-xs font-bold text-white tracking-widest uppercase">
                 Na Pista no Ar
               </span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
-              <span className="text-white">Podcast</span>
-              <span className="text-white/80"> Na Pista</span>
+            {/* Title */}
+            <h1 className="text-5xl sm:text-6xl md:text-8xl font-heading font-bold tracking-tight mb-6 leading-[0.95]">
+              <span className="text-white">Podcast </span>
+              <span className="text-[#EA1D2C] drop-shadow-[0_2px_10px_rgba(234,29,44,0.5)]">Na Pista</span>
             </h1>
-            <Image
-              src="/logo-ifood-header.png"
-              alt="iFood"
-              width={180}
-              height={50}
-              className="mx-auto mb-6 h-12 sm:h-14 md:h-16 w-auto object-contain brightness-0 invert opacity-90"
-              priority
-            />
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+
+            <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
               Tião e Juh batem um papo sobre o dia a dia do entregador, segurança no trânsito e o corre do delivery.
             </p>
           </div>
