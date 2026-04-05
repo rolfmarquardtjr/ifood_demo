@@ -46,6 +46,12 @@ export function BlogHeader() {
           </nav>
 
           <div className="flex items-center gap-3">
+            <Link
+              href="/missao"
+              className="hidden sm:inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#EA1D2C] text-white text-[13px] font-bold shadow-lg shadow-[#EA1D2C]/20 hover:shadow-[#EA1D2C]/40 hover:bg-[#C41825] transition-all duration-300 animate-pulse hover:animate-none"
+            >
+              🏍️ Missão Na Pista
+            </Link>
             <ThemeToggle />
             <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden p-2.5 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
