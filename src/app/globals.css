@@ -140,3 +140,39 @@
     @apply font-sans;
   }
 }
+
+/* Missão Na Pista animations */
+@keyframes rain {
+  0% { transform: translateY(-20px); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
+  20%, 40%, 60%, 80% { transform: translateX(4px); }
+}
+@keyframes flash {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes heartbeat {
+  0%, 100% { opacity: 0; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+@keyframes scan {
+  0% { transform: translateX(-100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.animate-rain { animation: rain linear infinite; }
+.animate-shake { animation: shake 0.5s ease-in-out; }
+.animate-flash { animation: flash 0.4s ease-out forwards; }
+.animate-heartbeat { animation: heartbeat 1s ease-in-out infinite; }
+.animate-scan { animation: scan 4s ease-in-out infinite; }
+.animate-bounce-slow { animation: bounce-slow 3s ease-in-out infinite; }
