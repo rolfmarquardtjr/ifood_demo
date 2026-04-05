@@ -55,7 +55,7 @@ export function BlogFooter() {
 
         <div className="mt-16 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs">&copy; {new Date().getFullYear()} iFood Na Pista. Todos os direitos reservados.</p>
-          <p className="text-xs">Pega a visão: no trânsito, enxergar o outro salva vidas. 🏍️</p>
+          <p className="text-xs">Pega a visão: no trânsito, enxergar o outro salva vidas.</p>
         </div>
       </div>
 
