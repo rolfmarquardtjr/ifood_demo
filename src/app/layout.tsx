@@ -1,17 +1,29 @@
 import type { Metadata } from "next";
-import { Playfair_Display, DM_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import "./globals.css";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
+const ifoodTextos = localFont({
+  src: [
+    { path: "../../public/fonts/iFoodRCTextos-Light.woff2", weight: "300", style: "normal" },
+    { path: "../../public/fonts/iFoodRCTextos-Regular.woff2", weight: "400", style: "normal" },
+    { path: "../../public/fonts/iFoodRCTextos-Medium.woff2", weight: "500", style: "normal" },
+    { path: "../../public/fonts/iFoodRCTextos-Bold.woff2", weight: "700", style: "normal" },
+  ],
+  variable: "--font-ifood-textos",
+  display: "swap",
 });
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
-  subsets: ["latin"],
+const ifoodTitulos = localFont({
+  src: [
+    { path: "../../public/fonts/iFoodRCTitulos-Light.woff2", weight: "300", style: "normal" },
+    { path: "../../public/fonts/iFoodRCTitulos-Regular.woff2", weight: "400", style: "normal" },
+    { path: "../../public/fonts/iFoodRCTitulos-Medium.woff2", weight: "500", style: "normal" },
+    { path: "../../public/fonts/iFoodRCTitulos-Bold.woff2", weight: "700", style: "normal" },
+  ],
+  variable: "--font-ifood-titulos",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -43,7 +55,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${playfair.variable} ${dmSans.variable} h-full antialiased font-sans`}
+      className={`${ifoodTitulos.variable} ${ifoodTextos.variable} h-full antialiased font-sans`}
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
