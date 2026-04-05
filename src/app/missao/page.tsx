@@ -154,22 +154,22 @@ const PROFILES = {
   blindado: {
     key: "blindado", name: "O Blindado", icon: "blindado", color: "#22c55e", bg: "#052810",
     description: "Você é o parceiro que todo mundo quer do lado no corredor. Pega a visão, respeita o limite, e sabe que chegar vivo é mais importante que chegar rápido.",
-    shareText: "Fiz a Missao Na Pista e sou O BLINDADO — 0 vacilo. E voce, qual piloto e?",
+    shareText: "Fiz a Missao Maio Amarelo e sou O BLINDADO — 0 vacilo. E voce, qual piloto e?",
   },
   ligeiro: {
     key: "ligeiro", name: "O Ligeiro", icon: "ligeiro", color: "#eab308", bg: "#1a1500",
     description: "Tem noção, parceiro. Sabe o que é certo. Mas na correria, às vezes escorrega. Cada decisão certa é uma chance a mais de voltar pra casa.",
-    shareText: "Fiz a Missao Na Pista e sou O LIGEIRO — quase la mas vacilei em uma. E voce?",
+    shareText: "Fiz a Missao Maio Amarelo e sou O LIGEIRO — quase la mas vacilei em uma. E voce?",
   },
   sortudo: {
     key: "sortudo", name: "O Sortudo", icon: "sortudo", color: "#f97316", bg: "#1a0800",
     description: "Tá contando com a sorte, parceiro. E sorte no trânsito tem prazo de validade. 41% dos entregadores já se acidentaram.",
-    shareText: "Fiz a Missao Na Pista e sou O SORTUDO — to contando com a sorte e sorte acaba. E voce?",
+    shareText: "Fiz a Missao Maio Amarelo e sou O SORTUDO — to contando com a sorte e sorte acaba. E voce?",
   },
   invisivel: {
     key: "invisivel", name: "O Invisível", icon: "invisivel", color: "#ef4444", bg: "#1a0202",
     description: "Invisível. É assim que o trânsito te trata. E é assim que você tá tratando sua segurança. 33 motociclistas morrem por dia no Brasil.",
-    shareText: "Fiz a Missao Na Pista e sou O INVISIVEL — preciso pegar a visao. E voce?",
+    shareText: "Fiz a Missao Maio Amarelo e sou O INVISIVEL — preciso pegar a visao. E voce?",
   },
 };
 
@@ -280,7 +280,7 @@ export default function MissaoPage() {
   const handleShare = () => {
     if (!profile) return;
     const text = profile.shareText + "\n\nhttps://ifooddemo.vercel.app/missao\n\n#MaioAmarelo #NaPista";
-    if (navigator.share) { navigator.share({ title: "Missao Na Pista", text }).catch(() => { navigator.clipboard?.writeText(text).then(() => { setCopied(true); setTimeout(() => setCopied(false), 3000); }); }); }
+    if (navigator.share) { navigator.share({ title: "Missao Maio Amarelo", text }).catch(() => { navigator.clipboard?.writeText(text).then(() => { setCopied(true); setTimeout(() => setCopied(false), 3000); }); }); }
     else { navigator.clipboard?.writeText(text).then(() => { setCopied(true); setTimeout(() => setCopied(false), 3000); }); }
   };
 
@@ -312,7 +312,7 @@ export default function MissaoPage() {
             <span className="text-[#EA1D2C] text-[10px] font-black uppercase tracking-[0.3em]">Maio Amarelo 2026</span>
           </div>
           <h1 className="text-7xl sm:text-8xl md:text-[10rem] font-black leading-[0.85] mb-2 tracking-tighter font-heading">MISSÃO</h1>
-          <p className="text-[#EA1D2C] text-3xl sm:text-4xl md:text-5xl font-black mb-10 leading-tight font-heading tracking-tight">NA PISTA</p>
+          <p className="text-[#EA1D2C] text-3xl sm:text-4xl md:text-5xl font-black mb-10 leading-tight font-heading tracking-tight">MAIO AMARELO</p>
           <div className="flex items-center justify-center gap-6 mb-12 text-white/20 text-xs">
             <div className="text-center"><p className="text-2xl font-black text-white/40 mb-0.5">5</p><p>situações</p></div>
             <div className="w-px h-8 bg-white/10" />
